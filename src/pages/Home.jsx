@@ -23,43 +23,52 @@ export const Home = () => {
 			.then(res => res.json())
 			.then(data => setPlanetas(data.results))
 			.catch(err => console.error(err))
-			
+
 		fetch("https://www.swapi.tech/api/vehicles")
 			.then(res => res.json())
 			.then(data => setVehiculos(data.results))
-			.catch(err => console.error(err))		
+			.catch(err => console.error(err))
 
 	}, []);
 
 	return (
-		<div className="container d-flex flex-column w-100">
-			<div className="d-flex flex-column w-100">
+		<div>
+			<div>
 				<h2>Personajes</h2>
-				<div className="d-flex  w-100 gap-4 flex-wrap">
+				<div className="d-flex overflow-auto gap-3 px-3" style={{ whiteSpace: 'nowrap' }}>
 					{personajes.map((personaje, index) => (
-						<TarjetaPersonaje key={index} personaje={personaje} />
+						<div style={{ flex: '0 0 auto' }}>
+							<TarjetaPersonaje key={index} personaje={personaje} />
+						</div>
 					))}
-					
 				</div>
 			</div>
 
-			<div className="d-flex flex-column w-100">
-				<h2>Planetas</h2>
-				<div className="d-flex  w-100 gap-4">
-					<TarjetaPlaneta planeta={{ name: "Tierra" }} />
-					<TarjetaPlaneta planeta={{ name: "Marte" }} />
-					<TarjetaPlaneta planeta={{ name: "Venus" }} />
+			<div>
+				<h2>Personajes</h2>
+				<div className="d-flex overflow-auto gap-3 px-3" style={{ whiteSpace: 'nowrap' }}>
+					{personajes.map((personaje, index) => (
+						<div style={{ flex: '0 0 auto' }}>
+							<TarjetaPersonaje key={index} personaje={personaje} />
+						</div>
+					))}
 				</div>
 			</div>
 
-			<div className="d-flex flex-column w-100">
-				<h2>Vehiculos</h2>
-				<div className="d-flex  w-100 gap-4">
-					<TarjetaVehiculo vehiculo={{ name: "nave1" }} />
-					<TarjetaVehiculo vehiculo={{ name: "nave2" }} />
-					<TarjetaVehiculo vehiculo={{ name: "nave3" }} />
+			<div>
+				<h2>Personajes</h2>
+				<div className="d-flex overflow-auto gap-3 px-3" style={{ whiteSpace: 'nowrap' }}>
+					{personajes.map((personaje, index) => (
+						<div style={{ flex: '0 0 auto' }}>
+							<TarjetaPersonaje key={index} personaje={personaje} />
+						</div>
+					))}
 				</div>
 			</div>
+
+			
+
+			
 
 		</div>
 	);

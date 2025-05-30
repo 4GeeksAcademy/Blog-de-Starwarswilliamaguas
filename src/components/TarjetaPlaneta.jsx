@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom'
 
 const TarjetaPlaneta = (props) => {
     return (
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card" style={{ width: "18rem", minWidth: "18rem" }}>
             <img src="https://picsum.photos/200/150?random=2" className="card-img-top"></img>
             <div className="card-body">
                 <h5 className="card-title">{props.planeta.name}</h5>
-                <div className= "d-flex justify-content-between">
-                                <Link to={"/"} className='btn btn-primary'>
-                                learn more
-                                </Link>
-                                <button className='btn btn-outline-warning'>
-                                    <i className="fa-regular fa-heart"></i>
-                                </button>
-                
-                               </div>
+                <div className="d-flex justify-content-between">
+                    <Link to={"/"} className='btn btn-primary'>
+                        learn more
+                    </Link>
+                    <button className='btn btn-outline-warning'>
+                        <i className="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
             </div>
         </div>
     )
