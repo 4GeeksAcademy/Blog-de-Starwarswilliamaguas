@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const TarjetaPersonaje = (props) => {
+    const navigate = useNavigate();
     return (
 
 
@@ -11,7 +12,9 @@ const TarjetaPersonaje = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.personaje.name}</h5>
                 <div className="d-flex justify-content-between">
-                    <Link to={"/"} className='btn btn-primary'>learn more</Link>
+                    <button className='btn btn-primary' onClick={() => navigate(`/personaje/${props.personaje.uid}`)}>
+                        learn more
+                    </button>
                     <button className='btn btn-outline-warning'>
                         <i className="fa-regular fa-heart"></i>
                     </button>

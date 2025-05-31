@@ -45,22 +45,22 @@ export const Home = () => {
 			</div>
 
 			<div>
-				<h2>Personajes</h2>
+				<h2>Planeta</h2>
 				<div className="d-flex overflow-auto gap-3 px-3" style={{ whiteSpace: 'nowrap' }}>
-					{personajes.map((personaje, index) => (
+					{planetas.map((planeta, index) => (
 						<div style={{ flex: '0 0 auto' }}>
-							<TarjetaPersonaje key={index} personaje={personaje} />
+							<TarjetaPlaneta key={index} planeta={planeta} />
 						</div>
 					))}
 				</div>
 			</div>
 
 			<div>
-				<h2>Personajes</h2>
+				<h2>Vehiculo</h2>
 				<div className="d-flex overflow-auto gap-3 px-3" style={{ whiteSpace: 'nowrap' }}>
-					{personajes.map((personaje, index) => (
+					{vehiculos.map((vehiculo, index) => (
 						<div style={{ flex: '0 0 auto' }}>
-							<TarjetaPersonaje key={index} personaje={personaje} />
+							<TarjetaVehiculo key={index} vehiculo={vehiculo} />
 						</div>
 					))}
 				</div>
